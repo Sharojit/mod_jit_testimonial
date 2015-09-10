@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+
+    <name>mod_jit_testimonial</name>
+    <creationDate>April 2014</creationDate>
+    <author>Sharojit</author>
+    <authorEmail>me@sharojit.com</authorEmail>
+    <authorUrl>http://www.sharojit.com</authorUrl>
+    <copyright>Copyright (C) 2015 Sharojit All rights reserved.</copyright>
+    <license>GNU/GPL V2 for PHP files. CSS / JS are Copyrighted Commercial</license>
+    <version>1.0</version>
+	
+    <description><![CDATA[<span class="readonly"><h1>Jit Testimonial [<small>ver. 1.1</small>]</h1>
+		<p>Advanced Testimonial module for Joomla! 3.x</p>
+<p>Jit testimonial is one the product of the next generation of JIT extensions designed exclusively for Joomla 3+.</p><p>With the Jit Testimonial module, you can implement the module testimonial on websites. With built-in support for module embedding, the possibilities for implementing this new release are unlimited! Learn more at the</p> <p class='homepage'><a href='http://www.sharojit.com/' target='_blank'>Jit Testimonial project website WWW.SHAROJIT.COM.</a></p></span>
+	]]></description>
+
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_jit_testimonial.ini
+        </language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_jit_testimonial.sys.ini
+        </language>
+    </languages>
+
+    <files>
+        <folder>assets</folder>
+        <folder>elements</folder>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+        <filename module="mod_jit_testimonial">mod_jit_testimonial.php</filename>
+        <filename>mod_jit_testimonial.xml</filename>
+        <filename>index.html</filename>
+    </files>
+    <config>
+        <fields name="params" addfieldpath="/modules/mod_jit_testimonial/elements">
+            <fieldset name="GENERAL_SETTING" label="MOD_GEN_SET_LABEL">
+                <field name="img" type="media" label="IMG_LABEL" default="" description="IMG_LABEL_DESC"/>
+                <field name="icon" type="text" label="ICON_LABLE" default="" description="ICON_LABLE_DESC"/>
+                <field name="iconcolor" type="text" label="ICONCOLOR_LABLE" default="" description="ICONCOLOR_LABLE_DESC"/>
+                <field name="title" type="text" label="TITLE_LABEL" default="" description="TITLE_LABEL_DESC"/>
+                <field name="link" type="text" label="TITLE_LINK" default="" description="TITLE_LINK_DESC"/>
+                <field name="titlecolor" type="text" label="TITLE_COLOR" default="" description="TITLE_COLOR_DESC"/>
+                <!--must keep this field-->
+                <field type="asset"/>
+            </fieldset>
+            <!-- Testimonial -->
+            <fieldset name="TESTIMONIAL_SETTING" label="MOD_TESTIMONIAL_LABEL">
+                <field
+                    name="box"
+                    type="list"
+                    label="BOX"
+                    default="8"
+                    description="BOX_DESC">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                    <option value="3">4</option>
+                    <option value="4">5</option>
+                    <option value="5">6</option>
+                    <option value="6">7</option>
+                    <option value="7">8</option>
+                    <option value="8">9</option>
+                    <option value="9">10</option>
+                    <option value="10">11</option>
+                    <option value="11">12</option>
+                </field>
+                <!--must keep this field-->
+                <field type="asset"/>
+            </fieldset>
+	
+            <!-- Client One -->
+            <fieldset name="CLIENT1" label="CLIENT1_LABEL">
+                <field name="image1" type="media" label="IMGL_LABEL" default="" description="IMGL_LABEL_DESC"/>
+                <field name="testimonial1" type="text" label="TESTIMONIAL_LABEL" default="" description="TESTIMONIAL_LABEL_DESC"/>
+                <field name="name1" type="text" label="CLIENT_LABEL" default="" description="CLIENT_LABEL_DESC"/>
+                <field name="designation1" type="text" label="DESIGNATION_LABEL" default="" description="DESIGNATION_LABEL_DESC"/>
+                <field name="bordercolor1" type="text" label="BORDER_LABEL" default="" description="BORDER_LABEL_DESC"/>
+                <!--must keep this field-->
+                <field type="asset"/>
+            </fieldset>
+
+            <!-- Client Two -->
+            <fieldset name="CLIENT2" label="CLIENT2_LABEL">
+                <field name="image2" type="media" label="IMGL_LABEL" default="" description="IMGL_LABEL_DESC"/>
+                <field name="testimonial2" type="text" label="TESTIMONIAL_LABEL" default="" description="TESTIMONIAL_LABEL_DESC"/>
+                <field name="name2" type="text" label="CLIENT_LABEL" default="" description="CLIENT_LABEL_DESC"/>
+                <field name="designation2" type="text" label="DESIGNATION_LABEL" default="" description="DESIGNATION_LABEL_DESC"/>
+                <field name="bordercolor2" type="text" label="BORDER_LABEL" default="" description="BORDER_LABEL_DESC"/>	
+                <!--must keep this field-->
+                <field type="asset"/>
+            </fieldset>			
+
+            <!-- Client Three -->
+            <fieldset name="CLIENT3" label="CLIENT3_LABEL">
+                <field name="image3" type="media" label="IMGL_LABEL" default="" description="IMGL_LABEL_DESC"/>
+                <field name="testimonial3" type="text" label="TESTIMONIAL_LABEL" default="" description="TESTIMONIAL_LABEL_DESC"/>
+                <field name="name3" type="text" label="CLIENT_LABEL" default="" description="CLIENT_LABEL_DESC"/>
+                <field name="designation3" type="text" label="DESIGNATION_LABEL" default="" description="DESIGNATION_LABEL_DESC"/>
+                <field name="bordercolor3" type="text" label="BORDER_LABEL" default="" description="BORDER_LABEL_DESC"/>
+                <!--must keep this field-->
+                <field type="asset"/>
+            </fieldset>	
+
+            <!-- Client Four -->
+            <fieldset name="CLIENT4" label="CLIENT4_LABEL">
+                <field name="image4" type="media" label="IMGL_LABEL" default="" description="IMGL_LABEL_DESC"/>
+                <field name="testimonial4" type="text" label="TESTIMONIAL_LABEL" default="" description="TESTIMONIAL_LABEL_DESC"/>
+                <field name="name4" type="text" label="CLIENT_LABEL" default="" description="CLIENT_LABEL_DESC"/>
+                <field name="designation4" type="text" label="DESIGNATION_LABEL" default="" description="DESIGNATION_LABEL_DESC"/>
+                <field name="bordercolor4" type="text" label="BORDER_LABEL" default="" description="BORDER_LABEL_DESC"/>
+                <!--must keep this field-->
+                <field type="asset"/>
+            </fieldset>	
+
+            <!-- Client Five -->
+            <fieldset name="CLIENT5" label="CLIENT5_LABEL">
+                <field name="image5" type="media" label="IMGL_LABEL" default="" description="IMGL_LABEL_DESC"/>
+                <field name="testimonial5" type="text" label="TESTIMONIAL_LABEL" default="" description="TESTIMONIAL_LABEL_DESC"/>
+                <field name="name5" type="text" label="CLIENT_LABEL" default="" description="CLIENT_LABEL_DESC"/>
+                <field name="designation5" type="text" label="DESIGNATION_LABEL" default="" description="DESIGNATION_LABEL_DESC"/>
+                <field name="bordercolor5" type="text" label="BORDER_LABEL" default="" description="BORDER_LABEL_DESC"/>
+                <!--must keep this field-->
+                <field type="asset"/>
+            </fieldset>	
+
+            <!-- Client Six -->
+            <fieldset name="CLIENT6" label="CLIENT6_LABEL">
+                <field name="image6" type="media" label="IMGL_LABEL" default="" description="IMGL_LABEL_DESC"/>
+                <field name="testimonial6" type="text" label="TESTIMONIAL_LABEL" default="" description="TESTIMONIAL_LABEL_DESC"/>
+                <field name="name6" type="text" label="CLIENT_LABEL" default="" description="CLIENT_LABEL_DESC"/>
+                <field name="designation6" type="text" label="DESIGNATION_LABEL" default="" description="DESIGNATION_LABEL_DESC"/>
+                <field name="bordercolor6" type="text" label="BORDER_LABEL" default="" description="BORDER_LABEL_DESC"/>
+                <!--must keep this field-->
+                <field type="asset"/>
+            </fieldset>	
+
+            <!-- Client Seven -->
+            <fieldset name="CLIENT7" label="CLIENT7_LABEL">
+                <field name="image7" type="media" label="IMGL_LABEL" default="" description="IMGL_LABEL_DESC"/>
+                <field name="testimonial7" type="text" label="TESTIMONIAL_LABEL" default="" description="TESTIMONIAL_LABEL_DESC"/>
+                <field name="name7" type="text" label="CLIENT_LABEL" default="" description="CLIENT_LABEL_DESC"/>
+                <field name="designation7" type="text" label="DESIGNATION_LABEL" default="" description="DESIGNATION_LABEL_DESC"/>
+                <field name="bordercolor7" type="text" label="BORDER_LABEL" default="" description="BORDER_LABEL_DESC"/>
+                <!--must keep this field-->
+                <field type="asset"/>
+            </fieldset>	
+
+            <!-- Client Eight -->
+            <fieldset name="CLIENT8" label="CLIENT8_LABEL">
+                <field name="image8" type="media" label="IMGL_LABEL" default="" description="IMGL_LABEL_DESC"/>
+                <field name="testimonial8" type="text" label="TESTIMONIAL_LABEL" default="" description="TESTIMONIAL_LABEL_DESC"/>
+                <field name="name8" type="text" label="CLIENT_LABEL" default="" description="CLIENT_LABEL_DESC"/>
+                <field name="designation8" type="text" label="DESIGNATION_LABEL" default="" description="DESIGNATION_LABEL_DESC"/>
+                <field name="bordercolor8" type="text" label="BORDER_LABEL" default="" description="BORDER_LABEL_DESC"/>
+                <!--must keep this field-->
+                <field type="asset"/>
+            </fieldset>	
+
+            <!-- Client Nine -->
+            <fieldset name="CLIENT9" label="CLIENT9_LABEL">
+                <field name="image9" type="media" label="IMGL_LABEL" default="" description="IMGL_LABEL_DESC"/>
+                <field name="testimonial9" type="text" label="TESTIMONIAL_LABEL" default="" description="TESTIMONIAL_LABEL_DESC"/>
+                <field name="name9" type="text" label="CLIENT_LABEL" default="" description="CLIENT_LABEL_DESC"/>
+                <field name="designation9" type="text" label="DESIGNATION_LABEL" default="" description="DESIGNATION_LABEL_DESC"/>
+                <field name="bordercolor9" type="text" label="BORDER_LABEL" default="" description="BORDER_LABEL_DESC"/>
+                <!--must keep this field-->
+                <field type="asset"/>
+            </fieldset>	
+
+            <!-- Client Ten -->
+            <fieldset name="CLIENT10" label="CLIENT10_LABEL">
+                <field name="image10" type="media" label="IMGL_LABEL" default="" description="IMGL_LABEL_DESC"/>
+                <field name="testimonial10" type="text" label="TESTIMONIAL_LABEL" default="" description="TESTIMONIAL_LABEL_DESC"/>
+                <field name="name10" type="text" label="CLIENT_LABEL" default="" description="CLIENT_LABEL_DESC"/>
+                <field name="designation10" type="text" label="DESIGNATION_LABEL" default="" description="DESIGNATION_LABEL_DESC"/>
+                <field name="bordercolor10" type="text" label="BORDER_LABEL" default="" description="BORDER_LABEL_DESC"/>
+                <!--must keep this field-->
+                <field type="asset"/>
+            </fieldset>	
+
+            <!-- Client Eleven -->
+            <fieldset name="CLIENT11" label="CLIENT11_LABEL">
+                <field name="image11" type="media" label="IMGL_LABEL" default="" description="IMGL_LABEL_DESC"/>
+                <field name="testimonial11" type="text" label="TESTIMONIAL_LABEL" default="" description="TESTIMONIAL_LABEL_DESC"/>
+                <field name="name11" type="text" label="CLIENT_LABEL" default="" description="CLIENT_LABEL_DESC"/>
+                <field name="designation11" type="text" label="DESIGNATION_LABEL" default="" description="DESIGNATION_LABEL_DESC"/>
+                <field name="bordercolor11" type="text" label="BORDER_LABEL" default="" description="BORDER_LABEL_DESC"/>
+                <!--must keep this field-->
+                <field type="asset"/>
+            </fieldset>	
+
+            <!-- Client Twelve -->
+            <fieldset name="CLIENT12" label="CLIENT12_LABEL">
+                <field name="image12" type="media" label="IMGL_LABEL" default="" description="IMGL_LABEL_DESC"/>
+                <field name="testimonial12" type="text" label="TESTIMONIAL_LABEL" default="" description="TESTIMONIAL_LABEL_DESC"/>
+                <field name="name12" type="text" label="CLIENT_LABEL" default="" description="CLIENT_LABEL_DESC"/>
+                <field name="designation12" type="text" label="DESIGNATION_LABEL" default="" description="DESIGNATION_LABEL_DESC"/>
+                <field name="bordercolor12" type="text" label="BORDER_LABEL" default="" description="BORDER_LABEL_DESC"/>
+                <!--must keep this field-->
+                <field type="asset"/>
+            </fieldset>	
+			
+            <fieldset name="advanced">
+                <field name="moduleclass_sfx" type="text" default="" label="MODSFX" description="MODSFX_DESC" />
+                <field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field name="cachemode" type="hidden" default="itemid">
+                    <option value="itemid"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
